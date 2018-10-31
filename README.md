@@ -1,5 +1,5 @@
 # neImageTools
-neImageTools is a set of components which extends the TImageList and TImage functionality by enabling them to load image files from a directory in design and run time
+neImageTools is a set of components which extends the TImageList and TImage functionality by enabling them to load image files directly from a directory during design and in run time
 
 # neImageList
 neImageList loads image files from a directory
@@ -20,7 +20,7 @@ Many times you want to supply images programmatically. TneImage has a dedicated 
 Build and install the package in SourceCode/Packages/Dxxx according to the Delphi installation you want to use. Then, just drag and drop the components to a multi-device form
 
 
-#Documentation
+# Documentation
 There is documentation about the classes, the methods and properties. Please check the "Documentation" folder.
 
 
@@ -31,9 +31,9 @@ There is documentation about the classes, the methods and properties. Please che
 3. When an image or a list of images are loaded in the components and the application is executed in Windows, the images show correctly. On Android, the components do not store the images in memory unless the image paths are supplied programmatically. It is unclear whether the images in Android are indeed not loaded to memory or the directories in design-time are lost under Android 
 4. There are some cases where the component in the IDE is not responsive although the directory and the other properties are correct. If this is the case provide a wrong directory, hit Enter and then re-enter the correct one. This should enforce the component to reload the files. Alternatively, drop a new components
 
-*** Please feel free to provide suggestions or pull requests ***
+*Please feel free to provide suggestions or pull requests *
 
-#Bugs, Suggestions, Comments and General Contact
+# Bugs, Suggestions, Comments and General Contact
 I hope you find the component useful. If you have any comments or ideas, have spotted any bugs or have any suggestions about changes to the code use the "Issues" tab on github or drop me an email at j_kour@hotmail.com
 
 Thanks!

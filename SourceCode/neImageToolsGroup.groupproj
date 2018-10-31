@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{DBA75884-FC83-4270-B47A-9974F2BC8783}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Packages\D102Tokyo\neImageToolsD102Tokyo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Demos\neImageList\Demo.neImageList.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Demos\neImage\Demo.neImage.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Tests\DUnitX\Test.neImageTools.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="neImageToolsD102Tokyo">
+        <MSBuild Projects="Packages\D102Tokyo\neImageToolsD102Tokyo.dproj"/>
+    </Target>
+    <Target Name="neImageToolsD102Tokyo:Clean">
+        <MSBuild Projects="Packages\D102Tokyo\neImageToolsD102Tokyo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="neImageToolsD102Tokyo:Make">
+        <MSBuild Projects="Packages\D102Tokyo\neImageToolsD102Tokyo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Demo_neImageList">
+        <MSBuild Projects="..\Demos\neImageList\Demo.neImageList.dproj"/>
+    </Target>
+    <Target Name="Demo_neImageList:Clean">
+        <MSBuild Projects="..\Demos\neImageList\Demo.neImageList.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Demo_neImageList:Make">
+        <MSBuild Projects="..\Demos\neImageList\Demo.neImageList.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Demo_neImage">
+        <MSBuild Projects="..\Demos\neImage\Demo.neImage.dproj"/>
+    </Target>
+    <Target Name="Demo_neImage:Clean">
+        <MSBuild Projects="..\Demos\neImage\Demo.neImage.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Demo_neImage:Make">
+        <MSBuild Projects="..\Demos\neImage\Demo.neImage.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Test_neImageTools">
+        <MSBuild Projects="..\Tests\DUnitX\Test.neImageTools.dproj"/>
+    </Target>
+    <Target Name="Test_neImageTools:Clean">
+        <MSBuild Projects="..\Tests\DUnitX\Test.neImageTools.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Test_neImageTools:Make">
+        <MSBuild Projects="..\Tests\DUnitX\Test.neImageTools.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="neImageToolsD102Tokyo;Demo_neImageList;Demo_neImage;Test_neImageTools"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="neImageToolsD102Tokyo:Clean;Demo_neImageList:Clean;Demo_neImage:Clean;Test_neImageTools:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="neImageToolsD102Tokyo:Make;Demo_neImageList:Make;Demo_neImage:Make;Test_neImageTools:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

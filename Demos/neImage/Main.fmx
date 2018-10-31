@@ -1,0 +1,41 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 334
+  ClientWidth = 481
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object neImage1: TneImage
+    MultiResBitmap = <
+      item
+      end>
+    Position.X = 32.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 161.000000000000000000
+    Size.PlatformDefault = False
+    BaseScale = 32.000000000000000000
+    DelimiterString = 'x'
+    Directory = '..\..\Images'
+    ImageTag = 'add_button'
+    FileExtension = 'png'
+  end
+  object neImage2: TneImage
+    MultiResBitmap = <
+      item
+      end>
+    Position.X = 232.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 161.000000000000000000
+    Size.PlatformDefault = False
+    BaseScale = 32.000000000000000000
+    DelimiterString = '@'
+    FileExtension = 'png'
+    OnGetBitmap = neImage2GetBitmap
+  end
+end
